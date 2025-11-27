@@ -45,6 +45,7 @@
 
    programs.zsh = {
     enable = true;
+    enableCompletion = true;
 
     shellAliases = {
       ls = "exa --color=auto";
