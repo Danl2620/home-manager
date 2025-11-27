@@ -1,0 +1,20 @@
+
+add_newline = true
+
+[character]
+success_symbol = "[➜](bold green)"
+
+[shell]
+bash_indicator = "[\\$](bold blue)"
+powershell_indicator = "[>_](bold blue)"
+disabled = false
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[� PICKING](bold red)"
+
+[aws]
+disabled = true
+
+[package]
+disabled = true

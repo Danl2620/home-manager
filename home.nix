@@ -40,9 +40,31 @@
     curl
     which
     eza
+    starship
   ];
 
-  ## please convert my .gitconfig in to the equivalent nix home-manager program.git configuration
+   programs.zsh = {
+    enable = true;
+
+    shellAliases = {
+      ls = "exa --color=auto";
+      ll = "ls -lF";
+      hm = "home-manager";
+      ##rk="${pkgs.racket}/bin/racket";
+      e="nohup ${pkgs.emacs}/Contents/MacOS/Emacs $@ &";
+      lg="${pkgs.lazygit}/bin/lazygit $@";
+    };
+
+    initContent = ''
+      # Ensure auto-wrap (margin mode) is enabled
+      tput smam 2>/dev/null || true
+
+      . "$HOME/.cargo/env"
+
+      eval "$(direnv hook zsh)"
+      eval "$(starship init zsh)"
+    '';
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -59,6 +81,8 @@
     # '';
     ".gitignore_global".source = ./config/git/gitignore_global;
     ".config/zed/settings.json".source = ./config/zed/settings.json;
+    ".config/starship.toml".source = ./config/starship.toml;
+    ".vimrc".source = ./config/vimrc;
   };
 
   # Home Manager can also manage your environment variables through
@@ -80,6 +104,9 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+  home.sessionPath = [
+    "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
