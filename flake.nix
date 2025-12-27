@@ -15,10 +15,9 @@
     home-manager,
     ...
   }: let
-    system = "x86_64-darwin";
+    system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
-  in {
-    homeConfigurations."dliebgold" = home-manager.lib.homeManagerConfiguration {
+    danConfig = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
 
       # Specify your home configuration modules here, for example,
@@ -28,6 +27,9 @@
       # Optionally use extraSpecialArgs
       # to pass through arguments to home.nix
     };
+  in {
+    ##homeConfigurations."dliebgold" = danConfig;
+    homeConfigurations."danl" = danConfig;
     formatter.${system} = pkgs.alejandra;
   };
 }
