@@ -3,6 +3,15 @@
   pkgs,
   ...
 }: {
+
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      # allowUnfreePredicate can be used to only allow specific packages
+      # allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "package-name" ]; 
+    };
+  };
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "danl";
@@ -21,7 +30,8 @@
     just
  
     helix
-    zed-editor
+    claude-code
+    meld
  ];
 
   # programs.zsh = {
@@ -62,10 +72,10 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
     ".gitignore_global".source = ./config/git/gitignore_global;
-    ".config/zed/settings.json".source = ./config/zed/settings.json;
-    ".config/starship.toml".source = ./config/starship.toml;
+    # ".config/zed/settings.json".source = ./config/zed/settings.json;
+    # ".config/starship.toml".source = ./config/starship.toml;
     ".config/nixpkgs/config.nix".source = ./config/nixpkgs/config.nix;
-    ".vimrc".source = ./config/vimrc;
+    # ".vimrc".source = ./config/vimrc;
   };
 
   # Home Manager can also manage your environment variables through
@@ -87,9 +97,6 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
-  home.sessionPath = [
-    "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -123,16 +130,8 @@
           required = true;
         };
       };
-      diff.tool = "sourcetree";
-      merge.tool = "sourcetree";
-      difftool.sourcetree = {
-        cmd = "/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \$LOCAL \$REMOTE";
-        trustExitCode = true;
-      };
-      mergetool.sourcetree = {
-        cmd = "/Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \$LOCAL \$REMOTE -ancestor \$BASE -merge \$MERGED";
-        trustExitCode = true;
-      };
+      diff.tool = "meld";
+      merge.tool = "meld";
       url = {
         "ssh://git@host" = {
           insteadOf = "otherhost";
