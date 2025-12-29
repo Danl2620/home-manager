@@ -72,6 +72,22 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
     ".gitignore_global".source = ./config/git/gitignore_global;
+    ".zsh_aliases".text = ''
+      # Directory listing
+      alias ls='eza --color=auto'
+      alias ll='eza -lF'
+      alias la='eza -laF'
+      alias lt='eza -lT'
+
+      # Home Manager
+      alias hm='home-manager'
+      alias hms='home-manager switch'
+
+      # Git shortcuts (supplementing git aliases)
+      alias gst='git status'
+      alias gco='git checkout'
+      alias gci='git commit'
+    '';
     # ".config/zed/settings.json".source = ./config/zed/settings.json;
     # ".config/starship.toml".source = ./config/starship.toml;
     ".config/nixpkgs/config.nix".source = ./config/nixpkgs/config.nix;
