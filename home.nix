@@ -32,6 +32,7 @@
     helix
     claude-code
     meld
+    serie
  ];
 
   # programs.zsh = {
@@ -78,6 +79,11 @@
       alias ll='eza -lF'
       alias la='eza -laF'
       alias lt='eza -lT'
+
+      # grep colors
+      alias grep='grep --color=auto'
+      alias egrep='egrep --color=auto'
+      alias fgrep='fgrep --color=auto'
 
       # Home Manager
       alias hm='home-manager'
