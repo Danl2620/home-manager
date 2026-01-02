@@ -28,6 +28,7 @@
     eza
     starship
     just
+    glow
  
     helix
     claude-code
@@ -93,6 +94,7 @@
       alias gst='git status'
       alias gco='git checkout'
       alias gci='git commit'
+      alias lg='lazygit'
     '';
     # ".config/zed/settings.json".source = ./config/zed/settings.json;
     # ".config/starship.toml".source = ./config/starship.toml;
