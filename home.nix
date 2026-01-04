@@ -25,6 +25,8 @@
     git
     curl
     which
+    cmake
+    ninja
     eza
     starship
     just
@@ -95,6 +97,11 @@
       alias gco='git checkout'
       alias gci='git commit'
       alias lg='lazygit'
+    '';
+    ".zsh_git_tools".source = ./shell/git-tools.sh;
+    ".zsh_hm".text = ''
+      source ~/.zsh_aliases
+      source ~/.zsh_git_tools
     '';
     # ".config/zed/settings.json".source = ./config/zed/settings.json;
     # ".config/starship.toml".source = ./config/starship.toml;
