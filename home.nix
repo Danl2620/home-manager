@@ -23,6 +23,7 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
     git
+    git-lfs
     curl
     which
     cmake
