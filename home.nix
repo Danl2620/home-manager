@@ -32,6 +32,8 @@
     starship
     just
     glow
+    wget
+    dropbox-cli
  
     helix
     claude-code
