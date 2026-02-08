@@ -111,6 +111,8 @@
     # ".config/starship.toml".source = ./config/starship.toml;
     ".config/nixpkgs/config.nix".source = ./config/nixpkgs/config.nix;
     # ".vimrc".source = ./config/vimrc;
+    ".local/share/development/cicd".source = ./config/claude/skills/cicd;
+    ".local/share/development/justfile".source = ./config/claude/skills/justfile;
   };
 
   # Home Manager can also manage your environment variables through

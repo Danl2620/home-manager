@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(mkdir:*)",
+      "Bash(home-manager switch:*)",
+      "Bash(git -C /home/danl/.config/home-manager add config/claude/skills/)"
     ],
     "deny": [],
     "ask": []
