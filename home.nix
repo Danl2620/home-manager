@@ -81,10 +81,10 @@
     ".gitignore_global".source = ./config/git/gitignore_global;
     ".zsh_aliases".text = ''
       # Directory listing
-      alias ls='eza --color=auto'
-      alias ll='eza -lF'
-      alias la='eza -laF'
-      alias lt='eza -lT'
+      # alias ls='eza --color=auto'
+      # alias ll='eza -lF'
+      # alias la='eza -laF'
+      # alias lt='eza -lT'
 
       # grep colors
       alias grep='grep --color=auto'
@@ -100,6 +100,7 @@
       alias gco='git checkout'
       alias gci='git commit'
       alias lg='lazygit'
+      alias o='obsidian --disable-gpu'
     '';
     ".zsh_git_tools".source = ./shell/git-tools.sh;
     ".zsh_hm".text = ''
