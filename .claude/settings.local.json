@@ -4,7 +4,9 @@
       "Bash(find:*)",
       "Bash(mkdir:*)",
       "Bash(home-manager switch:*)",
-      "Bash(git -C /home/danl/.config/home-manager add config/claude/skills/)"
+      "Bash(git -C /home/danl/.config/home-manager add config/claude/skills/)",
+      "Bash(gh:*)",
+      "Bash(glab:*)"
     ],
     "deny": [],
     "ask": []

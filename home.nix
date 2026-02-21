@@ -34,11 +34,12 @@
     glow
     wget
     dropbox-cli
- 
+
     helix
     claude-code
     meld
     serie
+    glab
  ];
 
   # programs.zsh = {
@@ -113,6 +114,7 @@
     # ".vimrc".source = ./config/vimrc;
     ".local/share/development/cicd".source = ./config/claude/skills/cicd;
     ".local/share/development/justfile".source = ./config/claude/skills/justfile;
+    ".local/share/development/pr-review".source = ./config/claude/skills/pr-review;
   };
 
   # Home Manager can also manage your environment variables through
