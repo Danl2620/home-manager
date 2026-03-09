@@ -6,7 +6,17 @@
       "Bash(home-manager switch:*)",
       "Bash(git -C /home/danl/.config/home-manager add config/claude/skills/)",
       "Bash(gh:*)",
-      "Bash(glab:*)"
+      "Bash(glab:*)",
+      "Bash(cat:*)",
+      "Bash(tree:*)",
+      "Bash(ssh:*)",
+      "Bash(git -C /home/danl/.config/home-manager remote:*)",
+      "Bash(chmod:*)",
+      "Bash(bash ~/.local/bin/generate-github-ssh-key)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:joecotellese.com)"
     ],
     "deny": [],
     "ask": []

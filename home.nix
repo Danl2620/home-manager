@@ -32,14 +32,13 @@
     starship
     just
     glow
-    wget
-    dropbox-cli
+    direnv
 
+    vscode
     helix
     claude-code
     meld
     serie
-    glab
  ];
 
   # programs.zsh = {
@@ -101,7 +100,6 @@
       alias gco='git checkout'
       alias gci='git commit'
       alias lg='lazygit'
-      alias o='obsidian --disable-gpu'
     '';
     ".zsh_git_tools".source = ./shell/git-tools.sh;
     ".zsh_hm".text = ''
@@ -112,9 +110,6 @@
     # ".config/starship.toml".source = ./config/starship.toml;
     ".config/nixpkgs/config.nix".source = ./config/nixpkgs/config.nix;
     # ".vimrc".source = ./config/vimrc;
-    ".local/share/development/cicd".source = ./config/claude/skills/cicd;
-    ".local/share/development/justfile".source = ./config/claude/skills/justfile;
-    ".local/share/development/pr-review".source = ./config/claude/skills/pr-review;
   };
 
   # Home Manager can also manage your environment variables through
@@ -134,7 +129,7 @@
   #  /etc/profiles/per-user/dliebgold/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
